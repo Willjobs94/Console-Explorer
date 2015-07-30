@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1438236648 source:c:\users\working\documents\github\console-explorer\main.cpp
+	<iostream>
+
+1438241547 source:c:\users\working\documents\github\console-explorer\src\childrenlist.cpp
+	"ChildrenList.h"
+
+1438242036 c:\users\working\documents\github\console-explorer\include\childrenlist.h
+	"Node.h"
+
+1438242252 c:\users\working\documents\github\console-explorer\include\node.h
+	<string>
+	"ChildrenList.h"
+
