@@ -43,11 +43,11 @@ void Tree::goOver(Node* node)
             cout << endl << node->getName() << " no tiene hijos" << endl;
         }
 
-           int size = node->getChildren() -> size();
+       int size = node->getChildren() -> size();
 
-            for(int i = 0 ; i < size ;i++){
-               goOver(children[i]);
-            }
+        for(int i = 0 ; i < size ;i++){
+           goOver(children[i]);
+        }
 
 
 
