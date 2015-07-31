@@ -27,7 +27,7 @@ void Tree::GoOver(Node* node)
         if(node->GetNumberOfChildren() > 0)
         {
 
-            cout << node->getName() << " es padre de: ";
+            cout << node->GetName() << " es padre de: ";
 
             for(int i = 0; i < node->GetNumberOfChildren(); i++)
             {
