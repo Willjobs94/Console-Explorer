@@ -8,16 +8,16 @@ class ChildrenList
         ChildrenList();
         virtual ~ChildrenList();
 
-        void addChild(Node* node);
-        void setFirstChild(Node* node);
-        void setLastChild(Node* node);
-        void setSize(int size);
-        Node* getFirstChild();
-        Node* getLastChild();
+        void AddChild(Node* node);
+        void SetFirstChild(Node* node);
+        void SetLastChild(Node* node);
+        void SetSize(int size);
+        Node* GetFirstChild();
+        Node* GettLastChild();
     private:
-        int size;
-        Node* firstChild;
-        Node* lastChild;
+        int _size;
+        Node* _firstChild;
+        Node* _lastChild;
 };
 
 #endif // ChildrenList_H

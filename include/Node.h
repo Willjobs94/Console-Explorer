@@ -1,8 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
+#include "ChildrenList.h"
 #include <string>
-
-
 
 
 class Node
@@ -13,32 +12,26 @@ class Node
         virtual ~Node();
 
         //vector<Node*>* getChildren();
-		std::string getName();
-		void setName(std::string name);
-		void setFather(Node* father);
-		void setDepth(int depth);
-		int getDepth();
-		void add(Node* child);
-		void setNumberOfChildren(int number);
-		int getNumberOfChildren();
-		Node* getFather();
-		void setNextSibling(Node* node);
-		Node* getNextSibling();
-		ChildrenList* getChildren();
-		void setChildren(ChildrenList* ChildrenList);
+		std::string GetName();
+		void SetName(std::string name);
+		void SetFather(Node* father);
+		void SetDepth(int depth);
+		int GetDepth();
+		void Add(Node* child);
+		void SetNumberOfChildren(int number);
+		int GetNumberOfChildren();
+		Node* GetFather();
+		void SetNextSibling(Node* node);
+		Node* GetNextSibling();
+		ChildrenList* GetChildrenList();
+		void SetChildren(ChildrenList* ChildrenList);
     private:
-        std::string name;
-        Node* father;
-		//vector<Node*> *children;
-		int depth;
-		int numberOfChildren;
-		std::string type; //dir or file
-
-		//as a list item
-        Node* nextSibling;
-
-        //children
-        ChildrenList* childrenList;
+        std::string _name;
+        Node* _father;
+		int _depth;
+		int _numberOfChildren;
+		std::string _type;
+        Node* _nextSibling;
+        ChildrenList* _childrenList;
 };
-
 #endif // NODE_H

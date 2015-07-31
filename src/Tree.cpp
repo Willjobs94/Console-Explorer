@@ -9,44 +9,44 @@ Tree::~Tree()
 {
     //dtor
 }
-Node Tree::getRoot()
+Node Tree::GetRoot()
 {
-    return root;
+    return _root;
 }
 
-void Tree::setRoot(Node* root)
+void Tree::SetRoot(Node* root)
 {
-    this->root = root;
+    _root = root;
 }
 
-void Tree::goOver(Node* node)
+void Tree::GoOver(Node* node)
 {
     if(node)
     {
-        vector<Node*> children = *node->getChildren();
-        if(node->getNumberOfChildren() > 0)
+        vector<Node*> children = *node->GetChildren();
+        if(node->GetNumberOfChildren() > 0)
         {
 
             cout << node->getName() << " es padre de: ";
 
-            for(int i = 0; i < node->getNumberOfChildren(); i++)
+            for(int i = 0; i < node->GetNumberOfChildren(); i++)
             {
                 if(i!=0){
                     cout << ", ";
                 }
-                cout << children[i]->getName();
+                cout << children[i]->GetName();
 
             }
         }
         else
         {
-            cout << endl << node->getName() << " no tiene hijos" << endl;
+            cout << endl << node->GetName() << " no tiene hijos" << endl;
         }
 
-           int size = node->getChildren() -> size();
+           int size = node->GetChildren() -> size();
 
             for(int i = 0 ; i < size ;i++){
-               goOver(children[i]);
+               GoOver(children[i]);
             }
 
 

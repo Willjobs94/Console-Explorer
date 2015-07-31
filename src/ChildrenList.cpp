@@ -1,51 +1,49 @@
 #include "ChildrenList.h"
 
-ChildrenList::ChildrenList()
+ChildrenList::ChildrenList() : _firstChild(NULL), _lastChild(NULL)
 {
-    firstChild = NULL;
-    lastChild = NULL;
 }
 
 ChildrenList::~ChildrenList()
 {
     //dtor
 }
-void ChildrenList::addChild(Node* child)
+void ChildrenList::AddChild(Node* child)
 {
-     if(firstChild == NULL){
-		firstChild = child;
-		lastChild = firstChild;
-		firstChild->setNextSibling(child);
-		lastChild->setNextSibling(firstChild);
-
-	}else{
-		lastChild -> setNextSibling(child);
-		lastChild = child;
-		lastChild->setNextSibling(firstChild);
+     if(_firstChild){
+		_firstChild = child;
+		_lastChild = firstChild;
+		_firstChild->SetNextSibling(child);
+		_lastChild->SetNextSibling(firstChild);
+        return;
 	}
+		_lastChild -> SetNextSibling(child);
+		_lastChild = child;
+		_lastChild->SetNextSibling(firstChild);
+
 }
 
-void ChildrenList::setFirstChild(Node* node)
+void ChildrenList::SetFirstChild(Node* node)
 {
-    firstChild = node;
+    _firstChild = node;
 }
 
 void ChildrenList::setLastChild(Node* node)
 {
-    lastChild = node;
+    _lastChild = node;
 }
 
 void ChildrenList::setSize(int size)
 {
-    this->size = size;
+    _size = size;
 }
 
 Node* ChildrenList::getFirstChild()
 {
-    return firstChild;
+    return _firstChild;
 }
 
 Node* ChildrenList::getLastChild()
 {
-    return lastChild;
+    return _lastChild;
 }

@@ -1,92 +1,86 @@
 #include "Node.h"
-
+using namespace std;
 Node::~Node()
 {
     //dtor
 }
-Node::Node(std::string name)
+Node::Node(string name) : ChildrenList(NULL), _name(name)
 {
-    //this -> children = new vector<Node*>;
-    ChildrenList = NULL;
-	this->name = name;
+
 }
 
-Node::Node(std::string name, Node* father, int depth, int numberOfChildren)
+Node::Node(string name, Node* father, int depth, int numberOfChildren) : _name(name), _father(father), _depth(depth), _numberOfChildren(numberOfChildren)
 {
-    this -> children = new vector<Node*>;
-    this->name = name;
-    this->father = father;
-    this->depth = depth;
-    this->numberOfChildren = numberOfChildren;
+
 }
 
-vector Node::getChildren()
+vector Node::GetChildren()
 {
-    return children;
+    return _children;
 }
 
-string Node::getName()
+string Node::GetName()
 {
-    return name;
+    return _name;
 }
 
-void Node::setName(string name)
+void Node::SetName(string name)
 {
-    this->name = name;
+    _name = name;
 }
 
-void Node::setFather(Node* father)
+void Node::SetFather(Node* father)
 {
-    this->father = father;
+    _father = father;
 }
 
-void Node::setDepth(int depth)
+void Node::SetDepth(int depth)
 {
-    this->depth = depth;
+    _depth = depth;
 }
 
-int Node::getDepth()
+int Node::GetDepth()
 {
-    return depth;
+    return _depth;
 }
 
-void Node::add(Node* child)
+void Node::Add(Node* child)
 {
     hijo->setProfundidad(profundidad + 1);
     hijos -> push_back(hijo);
 }
 
-void Node::setNumberOfChildren(int number)
+void Node::SetNumberOfChildren(int numberOfChildren)
 {
-    numberOfChildren = number;
+    _numberOfChildren = numberOfChildren;
 }
 
-int Node::getNumberOfChildren()
+int Node::GetNumberOfChildren()
 {
-    return numberOfChildren;
+    return _numberOfChildren;
 }
 
-Node* Node::getFather()
+Node* Node::GetFather()
 {
-    return father;
+    return _father;
 }
 
-void Node::setNextSibling(Node* node)
+void Node::SetNextSibling(Node* node)
 {
-    this->nextSibling = node;
+    _nextSibling = node;
 }
 
-Node* Node::getNextSibling()
+Node* Node::GetNextSibling()
 {
-    return nextSibling;
+    return _nextSibling;
 }
 
-ChildrenList* Node::getChildren()
+ChildrenList* Node::GetChildrenList()
 {
-    return childrenList;
+    return _childrenList;
 }
 
-void Node::setChildren(ChildrenList* childrenList)
+void Node::SetChildren(ChildrenList* childrenList)
 {
-    this->childrenList = childrenList;
+    _childrenList = childrenList;
 }

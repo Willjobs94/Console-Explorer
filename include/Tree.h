@@ -7,12 +7,12 @@ class Tree
     public:
         Tree();
         virtual ~Tree();
-        Node* getRoot();
-		void setRoot(Node* root);
-		void goOver(Nodo* nodo);
+        Node* GetRoot();
+		void SetRoot(Node* root);
+		void GoOver(Nodo* nodo);
 
     private:
-        Node* root;
+        Node* _root;
 };
 
 #endif // TREE_H
