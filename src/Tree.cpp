@@ -1,6 +1,7 @@
 #include "Tree.h"
+#include <stdlib.h>
 
-Tree::Tree()
+Tree::Tree() : root(NULL)
 {
     //ctor
 }
@@ -9,7 +10,7 @@ Tree::~Tree()
 {
     //dtor
 }
-Node Tree::getRoot()
+Node* Tree::getRoot()
 {
     return root;
 }
@@ -52,7 +53,9 @@ void Tree::goOver(Node* node)
 
 
 
-    }else{
+    }
+    else
+    {
         cout << "Arbol esta vacio" << endl;
     }
 }
