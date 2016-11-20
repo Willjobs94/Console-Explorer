@@ -1,6 +1,6 @@
 #include "ChildrenList.h"
 
-ChildrenList::ChildrenList() : _firstChild(NULL), _lastChild(NULL)
+ChildrenList::ChildrenList() : _firstChild(0), _lastChild(0)
 {
 }
 
@@ -11,15 +11,15 @@ ChildrenList::~ChildrenList()
 void ChildrenList::AddChild(Node* child)
 {
      if(_firstChild){
-		_firstChild = child;
-		_lastChild = firstChild;
-		_firstChild->SetNextSibling(child);
-		_lastChild->SetNextSibling(firstChild);
+                _firstChild = child;
+                _lastChild = _firstChild;
+                _firstChild->SetNextSibling(child);
+                _lastChild->SetNextSibling(_firstChild);
         return;
 	}
 		_lastChild -> SetNextSibling(child);
 		_lastChild = child;
-		_lastChild->SetNextSibling(firstChild);
+		_lastChild->SetNextSibling(_firstChild);
 
 }
 
@@ -28,22 +28,22 @@ void ChildrenList::SetFirstChild(Node* node)
     _firstChild = node;
 }
 
-void ChildrenList::setLastChild(Node* node)
+void ChildrenList::SetLastChild(Node* node)
 {
     _lastChild = node;
 }
 
-void ChildrenList::setSize(int size)
+void ChildrenList::SetSize(int size)
 {
     _size = size;
 }
 
-Node* ChildrenList::getFirstChild()
+Node* ChildrenList::GetFirstChild()
 {
     return _firstChild;
 }
 
-Node* ChildrenList::getLastChild()
+Node* ChildrenList::GetLastChild()
 {
     return _lastChild;
 }

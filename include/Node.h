@@ -1,8 +1,8 @@
 #ifndef NODE_H
 #define NODE_H
-#include "ChildrenList.h"
 #include <string>
 
+class ChildrenList;
 
 class Node
 {

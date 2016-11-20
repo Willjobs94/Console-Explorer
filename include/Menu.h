@@ -9,7 +9,7 @@ class Menu
     public:
         Menu();
         virtual ~Menu();
-        void
+
 };
 
 #endif // MENU_H

@@ -13,7 +13,7 @@ class ChildrenList
         void SetLastChild(Node* node);
         void SetSize(int size);
         Node* GetFirstChild();
-        Node* GettLastChild();
+        Node* GetLastChild();
     private:
         int _size;
         Node* _firstChild;

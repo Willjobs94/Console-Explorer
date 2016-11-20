@@ -1,5 +1,6 @@
 #ifndef TREE_H
 #define TREE_H
+#include "Node.h"
 
 
 class Tree
