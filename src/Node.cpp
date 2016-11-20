@@ -4,12 +4,12 @@ Node::~Node()
 {
     //dtor
 }
-Node::Node(string name) : ChildrenList(NULL), _name(name)
+Node::Node(string name) : _childrenList(0), _name(name)
 {
 
 }
 
-Node::Node(string name, Node* father, int depth, int numberOfChildren) : _name(name), _father(father), _depth(depth), _numberOfChildren(numberOfChildren)
+Node::Node(string name, Node* father, int depth, int numberOfChildren, Node* nextSibling) : _name(name), _father(father), _depth(depth), _numberOfChildren(numberOfChildren), _nextSibling(nextSibling)
 {
 
 }
